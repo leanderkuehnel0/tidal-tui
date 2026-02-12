@@ -1,0 +1,160 @@
+Screen {
+    background: #1e1e1e;
+    color: #f0f0f0;
+    layout: vertical;
+}
+
+Header {
+    dock: top;
+    height: 3;
+    background: #252526;
+    color: #007acc;
+    text-align: center;
+    text-style: bold;
+}
+
+Footer {
+    dock: bottom;
+    height: 1;
+    background: #252526;
+    color: #007acc;
+    text-align: center;
+}
+
+#status_bar {
+    dock: bottom;
+    height: 1;
+    background: #333333;
+    color: #cccccc;
+    text-align: left;
+    padding: 0 1;
+}
+
+#app_grid {
+    layout: vertical;
+    padding: 1;
+    /* flex: 1; */ /* Removed */
+    height: 1fr; /* Use 1fr for flex-like behavior in vertical layout */
+}
+
+#search_bar_container {
+    height: 3;
+    width: 100%;
+    margin-bottom: 0;
+    layout: horizontal;
+    align: center middle;
+    background: #252526;
+}
+
+Input {
+    width: 1fr;
+    background: #3c3c3c;
+    color: #f0f0f0;
+    border: none;
+    padding: 0 1;
+    height: 1;
+}
+
+Input:focus {
+    border: none;
+}
+
+#search_type_button {
+    height: 1;
+    width: 5;
+    min-width: 5;
+    padding: 0;
+    margin: 0 1;
+    background: #007acc;
+    color: #ffffff;
+    border: none;
+    text-align: center;
+    text-style: bold;
+}
+
+#main_content {
+    height: 1fr;
+}
+
+#results_container {
+    background: #1e1e1e;
+    border-right: solid #333333;
+    padding: 0;
+    width: 2fr;
+}
+
+#queue_panel {
+    background: #252526;
+    width: 1fr;
+    padding: 0 1;
+}
+
+#queue_label {
+    width: 100%;
+    text-align: center;
+    background: #333333;
+    color: #007acc;
+    text-style: bold;
+    height: 1;
+}
+
+#queue_list {
+    height: 1fr;
+}
+
+.queue_item {
+    width: 100%;
+    padding: 0 1;
+    color: #aaaaaa;
+    height: auto;
+    border-bottom: ascii #333333;
+}
+
+ContextMenu {
+    layout: vertical;
+    background: #333333;
+    border: solid #007acc;
+    width: 20;
+    height: auto;
+    layer: overlay;
+}
+
+ContextMenu Button {
+    width: 100%;
+    height: 1;
+    border: none;
+    background: transparent;
+    color: #f0f0f0;
+    text-align: left;
+    padding: 0 1;
+}
+
+ContextMenu Button:hover {
+    background: #007acc;
+    color: #ffffff;
+}
+
+ClickableStatic {
+    width: 100%;
+    height: auto;
+    padding: 0 1;
+    margin: 0;
+    color: #cccccc;
+    border-bottom: ascii #333333;
+}
+
+ClickableStatic:hover {
+    background: #252526;
+    color: #007acc;
+    border-bottom: ascii #007acc;
+}
+
+.feedback_message {
+    color: #aaaaaa;
+    text-style: italic;
+}
+
+.error_message {
+    color: #ff6666;
+    text-style: bold;
+}
