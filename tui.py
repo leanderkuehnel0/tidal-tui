@@ -163,9 +163,6 @@ class MusicPlayerTUI(App):
                         pass
             with Container(id="player_footer"):
                 with Horizontal(id="footer_controls"):
-                    yield Button("⏮", id="prev_button", classes="footer_btn")
-                    yield Button("⏯", id="pause_resume_footer_button", classes="footer_btn")
-                    yield Button("⏭", id="next_button", classes="footer_btn")
                     yield ProgressBar(id="playback_progress", show_eta=False, show_percentage=False)
         yield Footer()
         yield Static("Ready.", id="status_bar")
@@ -221,12 +218,6 @@ class MusicPlayerTUI(App):
     def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id == "search_type_button":
             self.cycle_search_type()
-        elif event.button.id == "prev_button":
-            self.action_prev_song()
-        elif event.button.id == "pause_resume_footer_button":
-            self.action_toggle_pause()
-        elif event.button.id == "next_button":
-            self.action_next_song()
 
     def cycle_search_type(self) -> None:
         types = ["song", "playlist", "artist"]
